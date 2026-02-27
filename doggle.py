@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl('https://www.qwant.com/'))
+        self.browser.setUrl(QUrl('https://search.brave.com/'))
         self.setCentralWidget(self.browser)
         self.showMaximized()
 
@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        self.browser.setUrl(QUrl('https://www.qwant.com/'))
+        self.browser.setUrl(QUrl('https://search.brave.com/'))
 
     def navigate_to_url(self):
         url = self.url_bar.text()
@@ -53,3 +53,4 @@ app = QApplication(sys.argv)
 QApplication.setApplicationName('Doggle')
 window = MainWindow()
 app.exec_()
+
